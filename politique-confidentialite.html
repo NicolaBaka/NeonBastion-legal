@@ -6,7 +6,8 @@
 <title>Politique de confidentialité — Neon Bastion: Tower Defense</title>
 <style>
   :root { color-scheme: light; }
-  body { font-family: Georgia, "Times New Roman", serif;
+  html { background: #ffffff; }
+  body { font-family: Georgia, "Times New Roman", serif; background: #ffffff;
          max-width: 800px; margin: 0 auto; padding: 32px 22px 80px;
          color: #1a2430; line-height: 1.7; font-size: 16.5px; }
   h1 { font-family: system-ui, "Segoe UI", sans-serif; font-size: 27px; line-height: 1.3; }
@@ -20,16 +21,29 @@
   th { background: #f2f5f9; }
   .box { background: #f2f7fb; border-left: 4px solid #2f6fb5; padding: 12px 16px;
          margin: 18px 0; font-family: system-ui, sans-serif; font-size: 15px; }
-  hr.sep { border: none; border-top: 3px double #c8d2de; margin: 60px 0 40px; }
   a { color: #1a5fb4; }
   ul { padding-left: 22px; }
   li { margin-bottom: 4px; }
+  .lang-toggle { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 8px;
+                 font-family: system-ui, "Segoe UI", sans-serif; }
+  .lang-toggle button { border: 1px solid #c8d2de; background: #fff; color: #5a6a7a;
+                        padding: 6px 16px; border-radius: 6px; font-size: 14px;
+                        font-weight: 600; cursor: pointer; }
+  .lang-toggle button.on { background: #2f6fb5; border-color: #2f6fb5; color: #fff; }
+  [hidden] { display: none; }
 </style>
 </head>
 <body>
 
+<div class="lang-toggle">
+  <button id="btn-fr" class="on" onclick="setLang('fr')">Français</button>
+  <button id="btn-en" onclick="setLang('en')">English</button>
+</div>
+
+<div id="doc-fr" lang="fr">
+
 <h1>Politique de confidentialité<br><span class="muted" style="font-size:19px">Neon Bastion: Tower Defense</span></h1>
-<p class="muted">Version 1.0 — en vigueur au 7 juillet 2026 · <a href="#en">English version below</a></p>
+<p class="muted">Version 1.0 — en vigueur au 7 juillet 2026</p>
 
 <div class="box">
 <strong>En bref :</strong> Neon Bastion ne demande aucun compte et ne collecte,
@@ -193,9 +207,11 @@ protection possible : on ne peut pas pirater ce qui n'existe pas.</p>
 cette politique sera mise à jour à la présente adresse, avec sa date de version.
 En cas de changement substantiel, une information sera affichée dans le Jeu.</p>
 
-<hr class="sep">
+</div>
 
-<h1 id="en">Privacy Policy<br><span class="muted" style="font-size:19px">Neon Bastion: Tower Defense</span></h1>
+<div id="doc-en" lang="en" hidden>
+
+<h1>Privacy Policy<br><span class="muted" style="font-size:19px">Neon Bastion: Tower Defense</span></h1>
 <p class="muted">Version 1.0 — effective July 7, 2026</p>
 
 <div class="box">
@@ -285,6 +301,27 @@ France: <a href="https://www.cnil.fr">CNIL</a>).</p>
 <h2>8. Changes</h2>
 <p>This policy is updated at this address with its version date; substantial
 changes will be announced in-game.</p>
+
+</div>
+
+<script>
+function setLang(l) {
+  document.getElementById('doc-fr').hidden = (l !== 'fr');
+  document.getElementById('doc-en').hidden = (l !== 'en');
+  document.getElementById('btn-fr').classList.toggle('on', l === 'fr');
+  document.getElementById('btn-en').classList.toggle('on', l === 'en');
+  document.documentElement.lang = l;
+  try { localStorage.setItem('nb-lang', l); } catch (e) {}
+}
+(function () {
+  var q = new URLSearchParams(location.search).get('lang');
+  var saved = null;
+  try { saved = localStorage.getItem('nb-lang'); } catch (e) {}
+  var nav = (navigator.language || 'fr').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en';
+  var l = q || saved || nav;
+  setLang(l === 'en' ? 'en' : 'fr');
+})();
+</script>
 
 </body>
 </html>
