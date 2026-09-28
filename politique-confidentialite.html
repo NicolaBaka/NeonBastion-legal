@@ -43,15 +43,19 @@
 <div id="doc-fr" lang="fr">
 
 <h1>Politique de confidentialité<br><span class="muted" style="font-size:19px">Neon Bastion: Tower Defense</span></h1>
-<p class="muted">Version 1.0 — en vigueur au 7 juillet 2026</p>
+<p class="muted">Version 1.1 — en vigueur au 1<sup>er</sup> octobre 2026 (version 1.0 du 7 juillet 2026)</p>
 
 <div class="box">
-<strong>En bref :</strong> Neon Bastion ne demande aucun compte et ne collecte,
-pour son propre usage, aucune donnée personnelle. Le jeu intègre trois services
-tiers — la publicité (Google AdMob), les achats intégrés (Google Play / App Store)
-et la sauvegarde cloud optionnelle (Google Play Jeux / Apple Game Center) — qui
-traitent des données techniques décrites en détail ci-dessous. Aucune donnée
-n'est vendue. Aucun profil nominatif n'est constitué par l'éditeur.
+<strong>En bref :</strong> Neon Bastion ne demande aucun compte : votre
+progression, votre pseudo et votre portrait restent sur votre appareil. Le Jeu
+intègre des services tiers : la publicité (Google AdMob), les achats intégrés
+(Google Play / App Store), la sauvegarde cloud optionnelle (Google Play Jeux /
+Apple Game Center), ainsi que des <strong>statistiques d'usage et des rapports
+de plantage</strong> (Google Firebase) qui nous servent à améliorer le Jeu.
+Les statistiques ne sont activées <strong>que si vous acceptez la mesure
+d'audience</strong> dans le formulaire de consentement, et tout se coupe à
+tout moment dans les réglages. Aucune donnée n'est vendue. Aucun profil
+nominatif n'est constitué par l'Éditeur.
 </div>
 
 <h2>1. Responsable du traitement</h2>
@@ -82,11 +86,12 @@ respectives.</p>
 
 <h3>3.2 Progression de jeu (traitement local)</h3>
 <table>
-  <tr><th>Données</th><td>Progression (niveaux, cartes, monnaies virtuelles, records, réglages)</td></tr>
+  <tr><th>Données</th><td>Progression (niveaux, cartes, monnaies virtuelles, records, réglages), pseudo et portrait choisis dans le Jeu</td></tr>
   <tr><th>Lieu</th><td>Uniquement sur votre appareil (stockage local de l'application)</td></tr>
   <tr><th>Finalité</th><td>Fonctionnement du Jeu (base légale : exécution du contrat, art. 6(1)(b) RGPD)</td></tr>
   <tr><th>Durée</th><td>Jusqu'à désinstallation du Jeu ou effacement de ses données</td></tr>
-  <tr><th>Accès de l'Éditeur</th><td><strong>Aucun</strong> — nous n'opérons aucun serveur</td></tr>
+  <tr><th>Code de sauvegarde</th><td>Vous pouvez exporter votre progression sous forme de code (Réglages). Ce code reste entre vos mains : il n'est envoyé nulle part par le Jeu</td></tr>
+  <tr><th>Accès de l'Éditeur</th><td><strong>Aucun</strong></td></tr>
 </table>
 
 <h3>3.3 Sauvegarde cloud (optionnelle)</h3>
@@ -146,24 +151,63 @@ Google utilise les données</a> ·
 cartes). Les probabilités d'obtention par rareté sont affichées dans le Jeu,
 avant l'achat.</p>
 
-<h3>3.6 Ce que nous n'utilisons pas</h3>
-<p>Le Jeu n'intègre <strong>aucun SDK d'analyse d'audience tiers</strong>
-(pas de Firebase Analytics, Facebook, AppsFlyer, etc.), aucun réseau social,
-aucun outil de suivi cross-app autre que celui strictement lié à la diffusion
-publicitaire décrite au §3.4.</p>
+<h3>3.6 Statistiques d'usage (Google Analytics for Firebase)</h3>
+<table>
+  <tr><th>Données</th><td>Événements de jeu : début et fin de partie (mode, vague atteinte, héros), montée de niveau, dépenses de monnaie virtuelle, écrans consultés, publicités vues. Données techniques : modèle et système de l'appareil, version du Jeu, langue, pays approximatif (déduit de l'adresse IP)</td></tr>
+  <tr><th>Identifiant</th><td>Un identifiant d'installation <strong>aléatoire</strong> créé par Firebase (données <em>pseudonymes</em>). <strong>Jamais l'identifiant publicitaire</strong>, aucun signal de personnalisation publicitaire, aucun lien avec votre identité</td></tr>
+  <tr><th>Démarrage</th><td>Dans l'EEE et au Royaume-Uni : <strong>uniquement si vous acceptez</strong> la mesure d'audience dans le formulaire de consentement du premier lancement (finalités « stocker ou accéder à des informations sur un appareil » et « mesurer la performance du contenu » ou « comprendre les publics »). Ailleurs : dès le premier lancement</td></tr>
+  <tr><th>Finalité</th><td>Comprendre comment le Jeu est joué pour l'améliorer : équilibrage, difficulté, ergonomie, rétention, revenu publicitaire global. Jamais utilisé pour vous adresser de la publicité</td></tr>
+  <tr><th>Base légale</th><td>Votre <strong>consentement</strong> (art. 6(1)(a) RGPD et art. 82 de la loi Informatique et Libertés), retirable à tout moment</td></tr>
+  <tr><th>Retrait / désactivation</th><td>Réglages du Jeu → « Choix de confidentialité » (rouvre le formulaire de consentement), ou « Statistiques et rapports de plantage » (coupe tout)</td></tr>
+  <tr><th>Destinataire</th><td>Google Ireland Ltd, en qualité de <strong>sous-traitant</strong> de l'Éditeur (<a href="https://firebase.google.com/support/privacy">Firebase et la confidentialité</a>). Nous ne consultons que des résultats agrégés</td></tr>
+  <tr><th>Conservation</th><td>14 mois au plus</td></tr>
+</table>
+
+<h3>3.7 Rapports de plantage (Firebase Crashlytics)</h3>
+<table>
+  <tr><th>Données</th><td>Si le Jeu plante ou rencontre une erreur : trace technique de l'erreur, modèle et système de l'appareil, version du Jeu, état de la mémoire et du stockage, et un identifiant d'installation aléatoire propre à Crashlytics</td></tr>
+  <tr><th>Finalité</th><td>Détecter et corriger les plantages (base légale : intérêt légitime, art. 6(1)(f) RGPD)</td></tr>
+  <tr><th>Désactivation</th><td>Même interrupteur : Réglages du Jeu → « Statistiques et rapports de plantage »</td></tr>
+  <tr><th>Destinataire</th><td>Google Ireland Ltd, sous-traitant</td></tr>
+  <tr><th>Conservation</th><td>90 jours</td></tr>
+</table>
+
+<h3>3.8 Notifications</h3>
+<p>Les rappels du Jeu (récompense disponible, recherche terminée…) sont des
+<strong>notifications locales</strong>, programmées sur votre appareil : aucun
+serveur ni jeton de notification n'est utilisé. L'autorisation est demandée
+après votre première partie, et vous pouvez la retirer à tout moment dans les
+réglages de votre appareil.</p>
+
+<h3>3.9 Vérification de l'heure</h3>
+<p>Pour protéger les minuteries du Jeu (recherches, récompenses quotidiennes)
+contre le changement d'heure de l'appareil, le Jeu lit l'heure officielle via
+une requête technique vers un serveur de Google (<code>www.google.com</code>),
+au lancement et au retour dans l'app. <strong>Aucune donnée de jeu ni
+identifiant n'est envoyé</strong> : seule votre adresse IP est, comme pour toute
+connexion, visible de Google.</p>
+
+<h3>3.10 Ce que nous n'utilisons pas</h3>
+<p>Le Jeu n'intègre aucun réseau social ni aucun autre outil d'analyse que
+Firebase (pas de Facebook, AppsFlyer, etc.), et aucun suivi publicitaire entre
+applications autre que celui lié à la publicité décrite au §3.4. Les
+statistiques du §3.6 ne sont ni vendues, ni partagées à des fins
+publicitaires.</p>
 
 <h2>4. Destinataires et transferts hors UE</h2>
-<p>Les seules entités recevant des données sont Google (AdMob, Play Jeux,
-Play Billing) et Apple (Game Center, StoreKit), chacune pour les traitements
-décrits ci-dessus. Ces fournisseurs peuvent transférer des données vers des
-pays tiers (notamment les États-Unis) ; ces transferts sont encadrés par le
-<em>EU-U.S. Data Privacy Framework</em> et/ou des clauses contractuelles types
-(art. 46 RGPD), sous la responsabilité de ces fournisseurs.</p>
+<p>Les seules entités recevant des données sont Google (AdMob, Play Jeux, Play
+Billing, Firebase) et Apple (Game Center, StoreKit), chacune pour les
+traitements décrits ci-dessus. Ces fournisseurs peuvent transférer des données
+vers des pays tiers (notamment les États-Unis) ; ces transferts sont encadrés
+par le <em>EU-U.S. Data Privacy Framework</em> et/ou des clauses
+contractuelles types (art. 46 RGPD).</p>
 
 <h2>5. Durées de conservation</h2>
 <ul>
   <li><strong>Progression locale :</strong> jusqu'à désinstallation ou effacement des données de l'app ;</li>
   <li><strong>Sauvegarde cloud :</strong> selon les règles de votre compte Google/Apple, jusqu'à suppression par vos soins ;</li>
+  <li><strong>Statistiques d'usage :</strong> 14 mois au plus ;</li>
+  <li><strong>Rapports de plantage :</strong> 90 jours ;</li>
   <li><strong>Données publicitaires :</strong> durées définies par Google
       (voir <a href="https://policies.google.com/technologies/retention">politique de conservation de Google</a>) ;</li>
   <li><strong>Emails reçus à l'adresse de contact :</strong> 3 ans maximum après le dernier échange.</li>
@@ -186,7 +230,10 @@ licéité des traitements antérieurs).</p>
 <p><strong>Comment les exercer concrètement :</strong></p>
 <table>
   <tr><th>Vous voulez…</th><th>Faites…</th></tr>
-  <tr><td>Retirer votre consentement publicitaire</td><td>Réinitialiser/supprimer l'ID publicitaire dans les réglages système (voir §3.4) — le formulaire de consentement est représenté conformément aux règles TCF</td></tr>
+  <tr><td>Retirer votre consentement publicitaire</td><td>Réglages du Jeu → « Choix de confidentialité », ou réinitialiser/supprimer l'ID publicitaire dans les réglages système (voir §3.4)</td></tr>
+  <tr><td>Retirer votre consentement aux statistiques</td><td>Réglages du Jeu → « Choix de confidentialité », ou couper « Statistiques et rapports de plantage » (effet immédiat)</td></tr>
+  <tr><td>Vous opposer aux rapports de plantage</td><td>Réglages du Jeu → couper « Statistiques et rapports de plantage »</td></tr>
+  <tr><td>Rompre le lien avec les statistiques déjà envoyées</td><td>Désinstaller le Jeu : l'identifiant d'installation est détruit, et les données associées s'effacent au terme de leur durée de conservation</td></tr>
   <tr><td>Effacer votre progression locale</td><td>Android/iOS : désinstaller le Jeu ou vider ses données</td></tr>
   <tr><td>Effacer votre sauvegarde cloud</td><td>Android : Paramètres Google → Google Play Jeux → supprimer les données de jeu ; iOS : Réglages → [votre nom] → iCloud / Game Center</td></tr>
   <tr><td>Toute autre demande</td><td>Écrire à <a href="mailto:nico.caetano94@gmail.com">nico.caetano94@gmail.com</a></td></tr>
@@ -199,27 +246,36 @@ l'autorité de contrôle de votre pays de résidence.</p>
 <p>Les échanges avec les services tiers sont chiffrés en transit (TLS). La
 progression locale est stockée dans l'espace privé de l'application, inaccessible
 aux autres applications sur un appareil non modifié. Nous n'opérons aucun serveur
-et ne détenons aucune base de données de joueurs — ce qui constitue la meilleure
-protection possible : on ne peut pas pirater ce qui n'existe pas.</p>
+de jeu et ne détenons aucune base de données nominative de joueurs ; les
+statistiques et rapports de plantage sont hébergés par Google (Firebase), avec
+un accès limité à l'Éditeur.</p>
 
 <h2>9. Modifications de cette politique</h2>
-<p>En cas d'évolution du Jeu (nouveaux services, nouvelles fonctionnalités),
-cette politique sera mise à jour à la présente adresse, avec sa date de version.
-En cas de changement substantiel, une information sera affichée dans le Jeu.</p>
+<p>En cas d'évolution du Jeu (nouveaux services, nouvelles fonctionnalités en
+ligne), cette politique sera mise à jour à la présente adresse, avec sa date de
+version, <strong>avant</strong> la mise en service de la fonctionnalité
+concernée. En cas de changement substantiel, une information sera affichée dans
+le Jeu.</p>
+<p class="muted">Version 1.1 : ajout des statistiques d'usage (soumises à
+votre consentement) et des rapports de plantage (Firebase), des notifications
+locales, du pseudo et du portrait.</p>
 
 </div>
 
 <div id="doc-en" lang="en" hidden>
 
 <h1>Privacy Policy<br><span class="muted" style="font-size:19px">Neon Bastion: Tower Defense</span></h1>
-<p class="muted">Version 1.0 — effective July 7, 2026</p>
+<p class="muted">Version 1.1 — effective October 1, 2026 (version 1.0 of July 7, 2026)</p>
 
 <div class="box">
-<strong>In short:</strong> Neon Bastion requires no account and collects no
-personal data for its own use. The game integrates three third-party services —
-advertising (Google AdMob), in-app purchases (Google Play / App Store) and
-optional cloud saves (Google Play Games / Apple Game Center) — which process the
-technical data detailed below. No data is ever sold.
+<strong>In short:</strong> Neon Bastion requires no account: your progress,
+nickname and portrait stay on your device. The game integrates third-party
+services: advertising (Google AdMob), in-app purchases (Google Play / App
+Store), optional cloud saves (Google Play Games / Apple Game Center), and
+<strong>usage statistics and crash reports</strong> (Google Firebase), which
+help us improve the game. Statistics are only enabled <strong>if you accept
+audience measurement</strong> in the consent form, and everything can be turned
+off at any time in the settings. No data is ever sold.
 </div>
 
 <h2>1. Data controller</h2>
@@ -231,14 +287,16 @@ within 30 days).</p>
 <h2>2. What the game does NOT collect</h2>
 <p>No name, email, phone number, precise location, contacts, photos, files,
 audio, health or biometric data. The game requires <strong>no account or
-sign-up</strong>. We operate <strong>no servers</strong> and hold no player
-database.</p>
+sign-up</strong>. We operate <strong>no game servers</strong> and hold no named
+player database.</p>
 
 <h2>3. Processing details</h2>
 <h3>3.1 Game progress (local)</h3>
-<p>Your progress (levels, cards, virtual currencies, settings) is stored only on
-your device (legal basis: performance of contract). It is deleted when you
-uninstall the game or clear its data. We have no access to it.</p>
+<p>Your progress (levels, cards, virtual currencies, settings), nickname and
+portrait are stored only on your device (legal basis: performance of contract).
+They are deleted when you uninstall the game or clear its data. We have no access
+to them. You can export your progress as a save code (Settings); the game never
+sends that code anywhere.</p>
 
 <h3>3.2 Optional cloud saves</h3>
 <p>If you sign in, your save file is stored in your own <strong>Google Play
@@ -270,18 +328,59 @@ deliver the item (legal basis: performance of contract). The game contains
 <strong>paid random items</strong> (card boosters); drop rates per rarity are
 displayed in-game before purchase.</p>
 
-<h3>3.5 No analytics</h3>
-<p>The game embeds no third-party analytics SDK, no social network SDK, and no
-cross-app tracking beyond the advertising described above.</p>
+<h3>3.5 Usage statistics (Google Analytics for Firebase)</h3>
+<p>In the EEA/UK, <strong>only if you accept audience measurement</strong> in the
+first-launch consent form (purposes "store and/or access information on a
+device" and "measure content performance" or "understand audiences"; elsewhere,
+from first launch), the game sends usage
+events — runs started and ended (mode, wave reached, hero), level-ups, virtual
+currency spending, screens viewed, ads watched — plus technical data (device
+model and OS, game version, language, approximate country from the IP address).
+They are tied to a <strong>random installation ID</strong> created by Firebase
+(<em>pseudonymous</em> data), <strong>never to your advertising ID</strong>, and
+never used to target ads. Purpose: understanding how the game is played to
+improve balance, difficulty, usability and retention. Legal basis: your
+<strong>consent</strong> (Art. 6(1)(a) GDPR), which you can withdraw at any time
+in Settings → "Privacy choices" (reopens the consent form) or by turning off
+"Usage stats and crash reports". Recipient: Google
+Ireland Ltd as our <strong>processor</strong>
+(<a href="https://firebase.google.com/support/privacy">Firebase privacy</a>); we
+only see aggregated results. Retention: 14 months at most.</p>
+
+<h3>3.6 Crash reports (Firebase Crashlytics)</h3>
+<p>If the game crashes or hits an error, a technical report is sent: error trace,
+device model and OS, game version, memory and storage state, and a random
+Crashlytics installation ID. Purpose: finding and fixing crashes (legitimate
+interest). Same switch: Settings → "Usage stats and crash reports". Processor:
+Google Ireland Ltd. Retention: 90 days.</p>
+
+<h3>3.7 Notifications</h3>
+<p>Game reminders are <strong>local notifications</strong> scheduled on your
+device: no server or push token is used. Permission is requested after your
+first run and can be revoked at any time in your device settings.</p>
+
+<h3>3.8 Time check</h3>
+<p>To protect the Game's timers (research, daily rewards) against device
+clock changes, the Game reads the official time with a technical request to a
+Google server (<code>www.google.com</code>) at launch and when you return to
+the app. <strong>No game data or identifier is sent</strong>: only your IP
+address is, as with any connection, visible to Google.</p>
+
+<h3>3.9 What we do not use</h3>
+<p>No social network SDK and no analytics tool other than Firebase (no
+Facebook, AppsFlyer, etc.), and no cross-app tracking beyond the advertising
+described above. Statistics are never sold or shared for advertising.</p>
 
 <h2>4. Recipients &amp; international transfers</h2>
-<p>Only Google and Apple receive data, for the purposes above. Their transfers
-outside the EU (notably to the US) are covered by the EU-U.S. Data Privacy
-Framework and/or Standard Contractual Clauses, under their responsibility.</p>
+<p>Only Google (AdMob, Play Games, Play Billing, Firebase) and Apple (Game
+Center, StoreKit) receive data, for the purposes above. Their transfers outside
+the EU (notably to the US) are covered by the EU-U.S. Data Privacy Framework
+and/or Standard Contractual Clauses.</p>
 
 <h2>5. Retention</h2>
 <p>Local progress: until uninstall. Cloud saves: until you delete them from your
-Google/Apple account. Advertising data: per
+Google/Apple account. Usage statistics: 14 months at most. Crash reports: 90
+days. Advertising data: per
 <a href="https://policies.google.com/technologies/retention">Google's retention
 policy</a>. Contact emails: up to 3 years after the last exchange.</p>
 
@@ -291,16 +390,21 @@ data from them. Ads comply with Google's ad content policies.</p>
 
 <h2>7. Your rights (GDPR)</h2>
 <p>You have the rights of access, rectification, erasure, restriction, objection,
-portability, and to withdraw consent at any time. In practice: reset/delete your
-advertising ID in system settings; uninstall the game to erase local progress;
-delete cloud saves from your platform account; email
+portability, and to withdraw consent at any time. In practice: Settings →
+"Privacy choices" to change your ad and statistics consent; reset/delete your
+advertising ID in system settings; turn off "Usage stats and crash reports" in
+the game settings; uninstall the game to erase local progress and destroy the
+installation ID; delete cloud saves from your platform account; email
 <a href="mailto:nico.caetano94@gmail.com">nico.caetano94@gmail.com</a> for
 anything else. You may lodge a complaint with your supervisory authority (in
 France: <a href="https://www.cnil.fr">CNIL</a>).</p>
 
 <h2>8. Changes</h2>
-<p>This policy is updated at this address with its version date; substantial
+<p>This policy is updated at this address with its version date,
+<strong>before</strong> any new online feature is switched on; substantial
 changes will be announced in-game.</p>
+<p class="muted">Version 1.1: added usage statistics (subject to your consent)
+and crash reports (Firebase), local notifications, nickname and portrait.</p>
 
 </div>
 
