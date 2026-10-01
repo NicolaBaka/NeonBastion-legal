@@ -2,7 +2,7 @@
   "leaderboards": {
     "recordAndroid": "CgkImNPImqsZEAIQAQ",
     "weeklyAndroid": "CgkImNPImqsZEAIQAg",
-    "recordIos": "",
-    "weeklyIos": ""
+    "recordIos": "com.getkapi.neonbastion.record",
+    "weeklyIos": "com.getkapi.neonbastion.weekly"
   }
 }
